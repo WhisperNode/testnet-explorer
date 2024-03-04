@@ -1,0 +1,18 @@
+{
+    "chain_name": "sei",
+    "api": ["https://sei-testnet-2-rest.brocha.in:443"],
+    "rpc": ["https://sei-testnet-2-rpc.brocha.in:443"],
+    "snapshot_provider": "",
+    "sdk_version": "0.46.15",
+    "coin_type": "118",
+    "min_tx_fee": "800",
+    "addr_prefix": "sei",
+    "logo": "/logos/sei.png",
+    "assets": [{
+        "base": "usei",
+        "symbol": "SEI",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": "/logos/sei.png"
+    }]
+}
