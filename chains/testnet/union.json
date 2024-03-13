@@ -1,0 +1,18 @@
+{
+    "chain_name": "union",
+    "api": ["https://union-testnet-api.polkachu.com:443"],
+    "rpc": ["https://union-testnet-rpc.polkachu.com:443"],
+    "snapshot_provider": "",
+    "sdk_version": "0.46.15",
+    "coin_type": "118",
+    "min_tx_fee": "800",
+    "addr_prefix": "union",
+    "logo": "/logos/union.png",
+    "assets": [{
+        "base": "muno",
+        "symbol": "UNION",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": "/logos/union.png"
+    }]
+}

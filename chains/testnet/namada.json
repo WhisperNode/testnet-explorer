@@ -1,5 +1,5 @@
 {
-    "chain_name": "namada-testnet",
+    "chain_name": "namada",
     "api": ["http://api.namada.info","http://api.namada.encipher88.tech"],
     "rpc": ["http://namada-rpc.zenode.app:80"],
     "snapshot_provider": "",
