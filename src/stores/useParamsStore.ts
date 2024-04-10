@@ -194,14 +194,17 @@ export const useParamStore = defineStore('paramstore', {
     async handleAbciInfo() {
       const res = await this.fetchAbciInfo();
 
-      localStorage.setItem(`sdk_version_${this.blockchain.chainName}`, res.application_version?.cosmos_sdk_version);
-      
-      this.appVersion.items = Object.entries(res.application_version).map(
-        ([key, value]) => ({ subtitle: key, value: value })
-      );
-      this.nodeVersion.items = Object.entries(res.default_node_info).map(
-        ([key, value]) => ({ subtitle: key, value: value })
-      );
+      if (res) {
+        localStorage.setItem(`sdk_version_${this.blockchain.chainName}`, res.application_version?.cosmos_sdk_version);
+        this.appVersion.items = Object.entries(res.application_version).map(
+            ([key, value]) => ({ subtitle: key, value: value })
+        );
+        this.nodeVersion.items = Object.entries(res.default_node_info).map(
+            ([key, value]) => ({ subtitle: key, value: value })
+        );
+      } else {
+        localStorage.setItem(`sdk_version_${this.blockchain.chainName}`, "v0.45.1");
+      }
     },
     async getBaseTendermintBlockLatest() {
       return await this.blockchain.rpc?.getBaseBlockLatest();
