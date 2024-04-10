@@ -211,9 +211,17 @@ function metaItem(metadata: string|undefined): { title: string; summary: string 
           {{ status }}
         </div>
       </h2>
-      <div class="">
+      <template v-if="chainStore.chainName === 'namada'">
+        <div class="">
+        <ObjectElement :value="{'title' : proposal.content?.title , 'description' : proposal.content?.description}" />
+        </div>
+      </template>
+      <template v-else>
+        <div class="">
         <ObjectElement :value="proposal.content" />
-      </div>
+        </div>
+      </template>
+      
       <div v-if="proposal.summary && !proposal.content?.description || metaItem(proposal?.metadata)?.summary ">
         <MdEditor
           :model-value="format.multiLine(proposal.summary || metaItem(proposal?.metadata)?.summary)"
@@ -245,7 +253,12 @@ function metaItem(metadata: string|undefined): { title: string; summary: string 
             <p
               class="absolute inset-x-0 inset-y-0 text-center text-sm text-[#666] dark:text-[#eee] flex items-center justify-center"
             >
+            <template v-if="item.value === '-'">
+               0%
+            </template>
+            <template v-else>
               {{ item.value }}
+            </template>
             </p>
           </div>
         </div>
@@ -356,7 +369,8 @@ function metaItem(metadata: string|undefined): { title: string; summary: string 
       </div>
     </div>
 
-    <div class="bg-[#ffffff] dark:bg-[#222222] px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <template v-if="chainStore.chainName !== 'namada'">
+      <div class="bg-[#ffffff] dark:bg-[#222222] px-4 pt-3 pb-4 rounded mb-4 shadow">
       <h2 class="card-title">{{ $t('gov.votes') }}</h2>
       <div class="overflow-x-auto">
         <table class="table w-full table-zebra">
@@ -389,5 +403,7 @@ function metaItem(metadata: string|undefined): { title: string; summary: string 
         />
       </div>
     </div>
+    </template>
+    
   </div>
 </template>

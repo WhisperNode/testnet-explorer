@@ -191,7 +191,8 @@ function fetchAllKeyRotation() {
           <div class="flex items-center justify-between py-0 w-[298px]">
             <label class="truncate text-sm">
               <span class="ml-1 text-black dark:text-white"
-                >{{ i + 1 }}.{{ v.description.moniker }}</span
+                >{{ i + 1 }}.{{ v.description?.moniker || v.description?.identity || v.description?.website }}
+              </span
               >
             </label>
             <div
