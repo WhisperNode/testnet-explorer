@@ -1,7 +1,7 @@
 {
     "chain_name": "namada",
-    "api": ["http://api.namada.info","http://api.namada.encipher88.tech"],
-    "rpc": ["http://namada-rpc.zenode.app:80"],
+    "api": [ "https://api-namada-testnet.whispernode.com:443"],
+    "rpc": [ "https://rpc-namada-testnet.whispernode.com:443"],
     "snapshot_provider": "",
     "sdk_version": "0.46.15",
     "coin_type": "118",
@@ -12,7 +12,7 @@
         "base": "unam",
         "symbol": "NAM",
         "exponent": "18",
-        "coingecko_id": "namada", 
+        "coingecko_id": "", 
         "logo": "/logos/namada.webp"
     }]
 }
