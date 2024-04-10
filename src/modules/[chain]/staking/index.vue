@@ -386,14 +386,21 @@ loadAvatars();
                                                 }"
                                                 class="font-weight-medium"
                                             >
-                                                {{ v.description?.moniker }}
+                                                <template v-if="chainStore.chainName === 'namada'">
+                                                    {{ v.description?.identity || v.description?.website || v.description?.moniker }}
+                                                </template>
+                                                <template v-else>
+                                                    {{ v.description?.moniker }}
+                                                </template>
                                             </RouterLink>
                                         </span>
-                                        <span class="text-xs">{{
-                                            v.description?.website ||
-                                            v.description?.identity ||
-                                            '-'
-                                        }}</span>
+                                        <span class="text-xs">
+                                                {{
+                                                    v.description?.website ||
+                                                    v.description?.identity ||
+                                                    '-'
+                                                }}
+                                        </span>
                                     </div>
                                 </div>
                             </td>
@@ -401,27 +408,35 @@ loadAvatars();
                             <!-- 👉 Voting Power -->
                             <td class="text-right">
                                 <div class="flex flex-col">
-                                    <h6 class="text-sm font-weight-medium whitespace-nowrap ">
-                                        {{
-                                            format.formatToken(
-                                                {
-                                                    amount: parseInt(
-                                                        v.tokens
-                                                    ).toString(),
-                                                    denom: staking.params
-                                                        .bond_denom,
-                                                },
-                                                true,
-                                                '0,0'
-                                            )
-                                        }}
-                                    </h6>
+                                    <template v-if="chainStore.chainName === 'namada'">
+                                        <!-- Content to render when specialVariable equals specialValue -->
+                                        <h6 class="text-sm font-weight-medium whitespace-nowrap ">
+                                            {{ parseInt(v.tokens).toLocaleString() }} NAM
+                                        </h6>
+                                    </template>
+                                    <template v-else>
+                                        <h6 class="text-sm font-weight-medium whitespace-nowrap ">
+                                            {{
+                                                format.formatToken(
+                                                    {
+                                                        amount: parseInt(
+                                                            v.tokens
+                                                        ).toString(),
+                                                        denom: staking.params
+                                                            .bond_denom,
+                                                    },
+                                                    true,
+                                                    '0,0'
+                                                )
+                                            }}
+                                        </h6>
+                                    </template>
                                     <span class="text-xs">{{
-                                        format.calculatePercent(
-                                            v.delegator_shares,
-                                            staking.totalPower
-                                        )
-                                    }}</span>
+                                            format.calculatePercent(
+                                                v.delegator_shares,
+                                                staking.totalPower
+                                            )
+                                        }}</span>
                                 </div>
                             </td>
                             <!-- 👉 24h Changes -->
