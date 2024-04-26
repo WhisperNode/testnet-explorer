@@ -1,0 +1,18 @@
+{
+    "chain_name": "mantra_hongbai",
+    "api": ["https://api.hongbai.mantrachain.io", "https://rest.testcosmos.directory/mantrachaintestnet"],
+    "rpc": ["https://rpc.hongbai.mantrachain.io"],
+    "snapshot_provider": "",
+    "sdk_version": "0.46.15",
+    "coin_type": "118",
+    "min_tx_fee": "800",
+    "addr_prefix": "uom",
+    "logo": "/logos/mantra.svg",
+    "assets": [{
+        "base": "uom",
+        "symbol": "OM",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": "/logos/mantra.svg"
+    }]
+}

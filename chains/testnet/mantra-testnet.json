@@ -1,5 +1,5 @@
 {
-    "chain_name": "mantra",
+    "chain_name": "mantra testnet 1",
     "api": ["https://api.testnet.mantrachain.io:443"],
     "rpc": ["https://rpc.testnet.mantrachain.io/"],
     "snapshot_provider": "",
