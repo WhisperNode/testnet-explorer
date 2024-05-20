@@ -1,0 +1,18 @@
+{
+    "chain_name": "berachain",
+    "api": ["https://berachain-testnet-api.synergynodes.com:443", "https://berachain-testnet.api.l0vd.com:443"],
+    "rpc": ["https://artio.rpc.berachain.com:443"],
+    "snapshot_provider": "",
+    "sdk_version": "0.46.15",
+    "coin_type": "118",
+    "min_tx_fee": "800",
+    "addr_prefix": "bera",
+    "logo": "/logos/bera.png",
+    "assets": [{
+        "base": "abgt",
+        "symbol": "BGT",
+        "exponent": "12",
+        "coingecko_id": "", 
+        "logo": "/logos/bera.png"
+    }]
+}
