@@ -1,6 +1,6 @@
 {
     "chain_name": "berachain",
-    "api": ["https://berachain-testnet-api.synergynodes.com:443", "https://berachain-testnet.api.l0vd.com:443"],
+    "api": ["https://berachain-testnet-api.synergynodes.com:443", "https://berachain-testnet.api.l0vd.com:443","https://api-berachain-testnet.whispernode.com:443","https://archive-berachain-testnet.whispernode.com/493208d467b1e2083b0023958ab9af944fcad3f8"],
     "rpc": ["https://artio.rpc.berachain.com:443","https://archive-berachain-testnet.whispernode.com/493208d467b1e2083b0023958ab9af944fcad3f8"],
     "snapshot_provider": "",
     "sdk_version": "0.46.15",
