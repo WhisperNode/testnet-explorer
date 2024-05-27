@@ -1,0 +1,18 @@
+{
+    "chain_name": "initia",
+    "api": ["https://api-initia-testnet.whispernode.com:443","https://initia-testnet-api.polkachu.com:443","https://lcd.initiation-1.initia.xyz"],
+    "rpc": ["https://rpc-initia-testnet.whispernode.com:443"],
+    "snapshot_provider": "",
+    "sdk_version": "0.50.6",
+    "coin_type": "118",
+    "min_tx_fee": "800",
+    "addr_prefix": "init",
+    "logo": "/logos/initia.jpg",
+    "assets": [{
+        "base": "uinit",
+        "symbol": "INIT",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": "/logos/initia.jpg"
+    }]
+}
