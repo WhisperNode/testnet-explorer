@@ -1,5 +1,5 @@
 {
-    "chain_name": "seda",
+    "chain_name": "seda-1-testnet",
     "api": ["https://api-seda-testnet.whispernode.com:443"],
     "rpc": ["https://rpc-seda-testnet.whispernode.com:443"],
     "snapshot_provider": "",

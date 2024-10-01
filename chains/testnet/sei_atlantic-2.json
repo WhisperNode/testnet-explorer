@@ -1,5 +1,5 @@
 {
-    "chain_name": "sei",
+    "chain_name": "sei_atlantic-2",
     "api": ["https://sei-testnet-2-rest.brocha.in:443"],
     "rpc": ["https://sei-testnet-2-rpc.brocha.in:443"],
     "snapshot_provider": "",
