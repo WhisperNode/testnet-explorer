@@ -1,5 +1,5 @@
 {
-    "chain_name": "axelar",
+    "chain_name": "axelar-testnet-lisbon-3",
     "api": ["https://lcd-axelar-testnet.imperator.co:443"],
     "rpc": ["https://rpc-seda-testnet.whispernode.com:443"],
     "snapshot_provider": "",
