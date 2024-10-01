@@ -1,5 +1,5 @@
 {
-    "chain_name": "neutron",
+    "chain_name": "neutron_pion-1",
     "api": ["https://neutron-testnet-api.polkachu.com:443", "https://rest-falcron.pion-1.ntrn.tech:443"],
     "rpc": ["https://neutron-testnet-rpc.polkachu.com:443"],
     "snapshot_provider": "",
